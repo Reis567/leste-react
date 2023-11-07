@@ -1,9 +1,9 @@
 import React from 'react'
 
-const newContato = () => {
+const   NewContato = () => {
   return (
     <div>newContato</div>
   )
 }
 
-export default newContato
+export default NewContato

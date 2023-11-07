@@ -6,7 +6,7 @@ import { createBrowserRouter , RouterProvider, Route} from 'react-router-dom'
 
 //Paginas
 import Home from './routes/Home.jsx'
-import newContato from './routes/newContato.jsx'
+import NewContato from './routes/NewContato.jsx'
 
 
 const router = createBrowserRouter([
@@ -15,15 +15,15 @@ const router = createBrowserRouter([
     children:[
       {
         path:'/',
-        element:<Home/>
+        element:<Home />
       },
       {
         path:'/new',
-        element:<newContato/>
+        element : <NewContato />
       },
     ],
   },
-])
+]);
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
