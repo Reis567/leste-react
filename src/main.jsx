@@ -8,22 +8,26 @@ import { createBrowserRouter , RouterProvider, Route} from 'react-router-dom'
 import Home from './routes/Home.jsx'
 import newContato from './routes/newContato.jsx'
 
+
 const router = createBrowserRouter([
   {
     element:<App/>,
     children:[
       {
-        path:'/'
+        path:'/',
+        element:<Home/>
       },
       {
-        path:'/new'
+        path:'/new',
+        element:<newContato/>
       },
     ],
   },
 ])
 
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App />
+   <RouterProvider router={router}/>
   </React.StrictMode>,
 )
