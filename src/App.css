@@ -4,5 +4,23 @@
 
 :root{
   --maincl :#00997b;
+  --white:#ffffff;
 }
 
+.navbar{
+  background: var(--white);
+  color: var(--maincl);
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 30px;
+  border-bottom: 1px solid var(--maincl);
+}
+.navlist{
+  display: flex;
+}
+.navlist .linkheader{
+  padding: 10px;
+  color: var(--maincl);
+}
