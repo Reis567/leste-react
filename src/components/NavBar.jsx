@@ -9,7 +9,7 @@ const NavBar = () => {
             </Link>
         <div className='navlist'>
             <h3>
-                <Link to={'/'} className='linkheader'>
+                <Link to={'/'} className='linkheaderhome'>
                     Home
                 </Link>
             </h3>
