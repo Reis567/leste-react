@@ -7,8 +7,9 @@
     background: var(--maincl);
 }
 .home-title{
-    font-size: 38px;
+    font-size: 45px;
     margin-block: 50px;
+    color: var(--white);
 }
 .contatosgrid {
     display: grid;
