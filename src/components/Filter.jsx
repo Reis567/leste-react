@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import './Filter.css';
 import PropTypes from 'prop-types'; 
 

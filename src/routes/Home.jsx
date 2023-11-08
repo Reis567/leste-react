@@ -3,6 +3,7 @@ import './Home.css'
 import axios from "axios"
 import ContatoCard from "../components/ContatoCard"
 import Filter from "../components/Filter"
+import Resumo from "../components/Resumo"
 
 
 const Home = () => {
@@ -60,6 +61,7 @@ const Home = () => {
     <div className="home-content">
       <h1 className="home-title">Contatos</h1>
       <Filter onFilter={applyFilters} />
+      <Resumo contatos={filteredContatos} />
       <div className="contatosgrid">
         {filteredContatos.length === 0 ? (
           <p>Carregando...</p>
@@ -69,7 +71,7 @@ const Home = () => {
           ))
         )}
       </div>
-      <Resumo/>
+      
     </div>
   );
 };
