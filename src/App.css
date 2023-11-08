@@ -16,3 +16,15 @@
   justify-content: center;
   align-items: center;
 }
+.btn{
+  padding: 10px;
+  background: var(--white);
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  box-shadow: 1px 1px 10px var(--black);
+}
+.btn:hover{
+  background: #7cff70;
+}

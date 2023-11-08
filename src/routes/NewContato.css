@@ -17,5 +17,28 @@
     width: 40%;
     border: 3px solid var(--white);
     border-radius: 10px;
-    height: 50%;
+    height: 60%;
+}
+.new-contato form .form-control{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-inline: 20px;
+    margin-block: 10px;
+}
+
+.new-contato form .form-control input{
+    width: 99%;
+    padding: 15px;
+    background: var(--white);
+    color: var(--black);
+    font-weight: bolder;
+    border-radius: 10px;
+    outline: none;
+}
+.new-contato form .form-control label{
+    font-size: 20px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: var(--white);
 }
