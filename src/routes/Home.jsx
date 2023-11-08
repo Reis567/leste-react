@@ -25,7 +25,15 @@ const Home = () => {
       <h1>
         Contatos
       </h1>
-      {contatos.length ===0 ? (<p>Carregando...</p>) : (<p>Carregou</p>) }
+      {contatos.length ===0 ? (<p>Carregando...</p>) : (
+        contatos.map((contato)=>(
+          <div className="contato" key={contato.id}>
+            <h2>
+              {contato.first_name}
+            </h2>
+          </div>
+        ))
+      ) }
     </div>
   )
 }
