@@ -15,18 +15,29 @@ const NewContato = () => {
   const [birthday, setBirthday] = useState('');
   const [avatar, setAvatar] = useState('');
 
-  const createContato = (e) => {
+  const createContato = async (e) => {
     e.preventDefault();
-  };
+    const newContato = {
+      first_name: firstName,
+      last_name: lastName,
+      email,
+      gender,
+      language,
+      birthday,
+      avatar: avatar ? URL.createObjectURL(avatar) : '', 
+    };
 
-  const getPosts = async () => {
-    try {
-      const response = await axios.get('https://my.api.mockaroo.com/lestetelecom/test.json?key=f55c4060')
-      const data = response.data;
-    } catch (error) {
-      console.log(error)
-    }
-  }
+
+    const existingContatos = JSON.parse(localStorage.getItem('contatos')) || [];
+
+
+    existingContatos.push(newContato);
+
+
+    localStorage.setItem('contatos', JSON.stringify(existingContatos));
+
+    navigate('/');
+  };
 
   return (
     <div className='new-contato'>
