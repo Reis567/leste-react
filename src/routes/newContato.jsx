@@ -17,7 +17,6 @@ const NewContato = () => {
 
   const createContato = (e) => {
     e.preventDefault();
-
   };
 
   const getPosts = async () => {

@@ -1,0 +1,22 @@
+.contatocard{
+    width: 90%;
+    height: 300px;
+    border: 1px solid var(--white);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    justify-content: space-evenly;
+    margin-left: 4.2%;
+}
+.contatocard img{
+    border: 2px solid var(--white);
+    border-radius: 10px;
+    max-height: 120px;
+    max-width: 120px;
+}
+.contatocard .name{
+    display: flex;
+    gap: 7px;
+}

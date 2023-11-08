@@ -1,0 +1,28 @@
+.filter{
+    width: 70%;
+    background: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 20px;
+    margin-block: 20px;
+}
+.filters-data{
+    display: flex;
+    padding: 20px;
+}
+
+.btn-green{
+    padding: 10px;
+    background: var(--maincl);
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    box-shadow: 1px 1px 10px var(--black);
+  }
+  .btn-green:hover{
+    background: #7cff70;
+  }
