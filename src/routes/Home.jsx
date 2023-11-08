@@ -5,9 +5,9 @@ import axios from "axios"
 
 const Home = () => {
 
-  const [contatos, setContatos]= useState([])
+  const [contatos, setContatos] = useState([])
 
-  const getPosts = async() => {
+  const getPosts = async () => {
     try {
       const response = await axios.get('https://my.api.mockaroo.com/lestetelecom/test.json?key=f55c4060')
       const data = response.data;
@@ -17,9 +17,9 @@ const Home = () => {
     }
   }
 
-  useEffect(()=>{
+  useEffect(() => {
     getPosts()
-  },[])
+  }, [])
   return (
     <div className="home-content">
       <h1 className="home-title">
@@ -27,30 +27,37 @@ const Home = () => {
       </h1>
       <div className="contatosgrid">
 
-      {contatos.length ===0 ? (<p>Carregando...</p>) : (
-        contatos.map((contato)=>(
-          <div className="contatocard" key={contato.id}>
-            <img src={contato.avatar} alt="" />
-            <h2>
-              {contato.first_name}-
-              {contato.last_name}
-            </h2>
-            <p>
-              {contato.email}
-            </p>
-            <p>
-              {contato.gender}
-              
-            </p>
-            <p>
-              {contato.language}
-            </p>
-            <p>
-              {contato.birthday}
-            </p>
-          </div>
-        ))
-      ) }
+        {contatos.length === 0 ? (<p>Carregando...</p>) : (
+          contatos.map((contato) => (
+            <div className="contatocard" key={contato.id}>
+              <img src={contato.avatar} alt="" />
+              <div className="name">
+                <h2>
+                  {contato.first_name}
+
+                </h2>
+
+                <h2>
+                  {contato.last_name}
+
+                </h2>
+              </div>
+              <p>
+                {contato.email}
+              </p>
+              <p>
+                {contato.gender}
+
+              </p>
+              <p>
+                {contato.language}
+              </p>
+              <p>
+                {contato.birthday}
+              </p>
+            </div>
+          ))
+        )}
       </div>
     </div>
   )

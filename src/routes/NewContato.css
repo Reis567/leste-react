@@ -17,7 +17,7 @@
     width: 40%;
     border: 3px solid var(--white);
     border-radius: 10px;
-    height: 60%;
+    padding: 20px;
 }
 .new-contato form .form-control{
     display: flex;
@@ -32,7 +32,6 @@
     padding: 15px;
     background: var(--white);
     color: var(--black);
-    font-weight: bolder;
     border-radius: 10px;
     outline: none;
 }
@@ -41,4 +40,8 @@
     margin-bottom: 5px;
     font-weight: bold;
     color: var(--white);
+}
+.new-contato form .btn{
+    margin-left: 30px;
+    margin-top: 20px;
 }

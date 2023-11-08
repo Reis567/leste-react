@@ -50,7 +50,12 @@ const   NewContato = () => {
           <div className='form-control'>
 
             <label htmlFor="birthday">Nascimento :</label>
-            <input type="date" name='birthday' placeholder='Insira aqui a data de nascimento' id='nascimento' />
+            <input type="date" name='birthday' id='nascimento' />
+          </div>
+          <div className='form-control'>
+
+            <label htmlFor="avatar">Avatar :</label>
+            <input type="file" name='birthday'  id='avatar' />
           </div>
           <input type="submit" value="Criar contato" className='btn'/>
         </form>
