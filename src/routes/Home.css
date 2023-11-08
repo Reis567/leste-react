@@ -1,0 +1,30 @@
+.home-content{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    background: var(--maincl);
+}
+.home-title{
+    font-size: 38px;
+    margin-block: 50px;
+}
+.contatosgrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 20px; 
+    width: 100%;
+    min-height: 90vh;
+    
+
+  }
+.contatocard{
+    width: 90%;
+    height: 300px;
+    border: 1px solid var(--white);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}

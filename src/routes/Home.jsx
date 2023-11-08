@@ -21,19 +21,26 @@ const Home = () => {
     getPosts()
   },[])
   return (
-    <div>
-      <h1>
+    <div className="home-content">
+      <h1 className="home-title">
         Contatos
       </h1>
+      <div className="contatosgrid">
+
       {contatos.length ===0 ? (<p>Carregando...</p>) : (
         contatos.map((contato)=>(
-          <div className="contato" key={contato.id}>
+          <div className="contatocard" key={contato.id}>
             <h2>
-              {contato.first_name}
+              {contato.first_name}-
+              {contato.last_name}
+            </h2>
+            <h2>
+              {contato.email}
             </h2>
           </div>
         ))
       ) }
+      </div>
     </div>
   )
 }
