@@ -30,13 +30,24 @@ const Home = () => {
       {contatos.length ===0 ? (<p>Carregando...</p>) : (
         contatos.map((contato)=>(
           <div className="contatocard" key={contato.id}>
+            <img src={contato.avatar} alt="" />
             <h2>
               {contato.first_name}-
               {contato.last_name}
             </h2>
-            <h2>
+            <p>
               {contato.email}
-            </h2>
+            </p>
+            <p>
+              {contato.gender}
+              
+            </p>
+            <p>
+              {contato.language}
+            </p>
+            <p>
+              {contato.birthday}
+            </p>
           </div>
         ))
       ) }
