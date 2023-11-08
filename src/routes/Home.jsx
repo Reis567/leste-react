@@ -10,7 +10,8 @@ const Home = () => {
   const getPosts = async() => {
     try {
       const response = await axios.get('https://my.api.mockaroo.com/lestetelecom/test.json?key=f55c4060')
-      console.log(response)
+      const data = response.data;
+      console.log(data)
     } catch (error) {
       console.log(error)
     }
