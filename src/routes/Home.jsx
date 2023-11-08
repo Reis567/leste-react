@@ -11,7 +11,7 @@ const Home = () => {
     try {
       const response = await axios.get('https://my.api.mockaroo.com/lestetelecom/test.json?key=f55c4060')
       const data = response.data;
-      console.log(data)
+      setContatos(data);
     } catch (error) {
       console.log(error)
     }
@@ -21,7 +21,12 @@ const Home = () => {
     getPosts()
   },[])
   return (
-    <div>Home</div>
+    <div>
+      <h1>
+        Contatos
+      </h1>
+      {contatos.length ===0 ? (<p>Carregando...</p>) : (<p>Carregou</p>) }
+    </div>
   )
 }
 
