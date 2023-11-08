@@ -1,7 +1,29 @@
 import React from 'react'
 import './NewContato.css'
+import axios from 'axios'
+import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const   NewContato = () => {
+  const navigate = useNavigate()
+
+  const [firstName, setFirstName] = useState(''); 
+  const [lastName, setLastName] = useState(''); 
+  const [email, setEmail] = useState('');
+  const [gender, setGender] = useState('N'); 
+  const [language, setLanguage] = useState('Portugues'); 
+  const [birthday, setBirthday] = useState('');   
+  const [avatar, setAvatar] = useState('');  
+
+  const getPosts = async () => {
+    try {
+      const response = await axios.get('https://my.api.mockaroo.com/lestetelecom/test.json?key=f55c4060')
+      const data = response.data;
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
   return (
     <div className='new-contato'>
         <h2>
