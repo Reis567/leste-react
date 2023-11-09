@@ -26,5 +26,22 @@
   box-shadow: 1px 1px 10px var(--black);
 }
 .btn:hover{
-  background: #7cff70;
+  background: var(--sec-cl);
+}
+
+select{
+  padding: 10px 15px;
+  border-radius: 20px;
+  background: var(--maincl);
+  
+  color: var(--white);
+  margin-inline: 5px;
+  transition: 0.3s ease-in-out;
+  outline: none;
+}
+select:focus{
+  background: var(--sec-cl);
+}
+.margin-inline10{
+  margin-inline: 10px;
 }

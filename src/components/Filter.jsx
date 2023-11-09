@@ -31,7 +31,7 @@ const Filter = ({ onFilter }) => {
     <div className="filter">
       <h2>Filtrar</h2>
       <div className="filters-data">
-        <div>
+        <div className='margin-inline10'>
           <label>Gênero:</label>
           <select onChange={(e) => setGenderFilter(e.target.value)}>
             <option value="">Todos</option>
@@ -39,8 +39,8 @@ const Filter = ({ onFilter }) => {
             <option value="F">Feminino</option>
           </select>
         </div>
-        <div>
-          <label>Idiomas:</label>
+        <div  className='margin-inline10'>
+          <label>Idioma:</label>
           <select onChange={(e) => setLanguageFilter(e.target.value)}>
             <option value="">Todos</option>
             {uniqueLanguages.map((language) => (
@@ -50,8 +50,8 @@ const Filter = ({ onFilter }) => {
             ))}
           </select>
         </div>
-        <div>
-          <label>Month of Birthday:</label>
+        <div  className='margin-inline10'>
+          <label>Mês de aniversário:</label>
           <select onChange={(e) => setMonthFilter(e.target.value)}>
             <option value="">Todos</option>
             <option value="1">Janeiro</option>

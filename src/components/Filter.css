@@ -22,7 +22,8 @@
     cursor: pointer;
     transition: 0.3s ease-in-out;
     box-shadow: 1px 1px 10px var(--black);
+    color: var(--white);
   }
   .btn-green:hover{
-    background: #7cff70;
+    background: var(--sec-cl);
   }
