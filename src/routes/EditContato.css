@@ -15,7 +15,7 @@
 
 .edit-contato form{
     width: 40%;
-    border: 3px solid var(--white);
+    background: var(--white);
     border-radius: 10px;
     padding: 20px;
 }
@@ -30,18 +30,46 @@
 .edit-contato form .form-control input{
     width: 99%;
     padding: 15px;
-    background: var(--white);
-    color: var(--black);
+    background: var(--maincl);
+    color: var(--white);
     border-radius: 10px;
     outline: none;
+    transition: 0.3s ease-in-out;
 }
-.new-contato form .form-control label{
+.edit-contato form .form-control label{
     font-size: 20px;
     margin-bottom: 5px;
     font-weight: bold;
+    color: var(--black);
+}
+
+.edit-contato form .select-divs{
+    display: flex;
+    width: 100%;
+    color: var(--black);
+    margin-inline: 20px;
+    margin-block: 10px;
+    justify-content: space-around;
+    align-items: center;
+}
+.edit-contato form .select-divs select{
     color: var(--white);
 }
+
+.edit-contato form .form-control .input-data{
+    color: var(--white);
+}
+
+.edit-contato form .form-control input:focus{
+    background: var(--sec-cl);
+}
+
+
 .edit-contato form .btn{
     margin-left: 30px;
     margin-top: 20px;
+}
+
+.inputform::placeholder {
+    color: var(--white);
 }

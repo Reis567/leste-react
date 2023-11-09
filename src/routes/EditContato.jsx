@@ -54,7 +54,8 @@ const EditContato = () => {
             name='first_name'
             value={contato.first_name}
             onChange={(e) => setContato({ ...contato, first_name: e.target.value })}
-            required/>
+            required
+            className='inputform'/>
         </div>
         <div className='form-control'>
           <label htmlFor='last_name'>Sobrenome:</label>
@@ -74,6 +75,8 @@ const EditContato = () => {
             onChange={(e) => setContato({ ...contato, email: e.target.value })}
             required/>
         </div>
+        <div className='select-divs'>
+
         <div className='form-control'>
           <label htmlFor='gender'>Gênero:</label>
           <select
@@ -108,6 +111,7 @@ const EditContato = () => {
             <option value="Luxembourgish">Luxembourgish</option>
           </select>
         </div>
+        </div>
         <div className='form-control'>
           <label htmlFor='birthday'>Nascimento:</label>
           <input
@@ -115,7 +119,8 @@ const EditContato = () => {
             name='birthday'
             value={contato.birthday}
             onChange={(e) => setContato({ ...contato, birthday: e.target.value })}
-            required/>
+            required
+            className='input-data'/>
         </div>
         <div className='form-control'>
           <label htmlFor='avatar'>URL do Avatar:</label>
