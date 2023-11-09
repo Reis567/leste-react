@@ -54,7 +54,7 @@ const EditContato = () => {
             name='first_name'
             value={contato.first_name}
             onChange={(e) => setContato({ ...contato, first_name: e.target.value })}
-          />
+            required/>
         </div>
         <div className='form-control'>
           <label htmlFor='last_name'>Sobrenome:</label>
@@ -63,7 +63,7 @@ const EditContato = () => {
             name='last_name'
             value={contato.last_name}
             onChange={(e) => setContato({ ...contato, last_name: e.target.value })}
-          />
+            required/>
         </div>
         <div className='form-control'>
           <label htmlFor='email'>Email:</label>
@@ -72,7 +72,7 @@ const EditContato = () => {
             name='email'
             value={contato.email}
             onChange={(e) => setContato({ ...contato, email: e.target.value })}
-          />
+            required/>
         </div>
         <div className='form-control'>
           <label htmlFor='gender'>Gênero:</label>
@@ -115,7 +115,7 @@ const EditContato = () => {
             name='birthday'
             value={contato.birthday}
             onChange={(e) => setContato({ ...contato, birthday: e.target.value })}
-          />
+            required/>
         </div>
         <div className='form-control'>
           <label htmlFor='avatar'>URL do Avatar:</label>
@@ -124,7 +124,7 @@ const EditContato = () => {
             name="avatar"
             value={contato.avatar}
             onChange={(e) => setContato({ ...contato, avatar: e.target.value })} 
-          />
+            required/>
         </div>
         <input type='submit' value='Salvar' className='btn' />
       </form>

@@ -53,7 +53,8 @@ const NewContato = () => {
           name='first_name'
           placeholder='Insira aqui o nome' 
           id='first_name' 
-          onChange={(e)=>setFirstName(e.target.value)}/>
+          onChange={(e)=>setFirstName(e.target.value)}
+          required/>
         </div>
 
         <div className='form-control'>
@@ -63,7 +64,8 @@ const NewContato = () => {
           name='last_name' 
           placeholder='Insira aqui o sobrenome' 
           id='last_name' 
-          onChange={(e)=>setLastName(e.target.value)}/>
+          onChange={(e)=>setLastName(e.target.value)}
+          required/>
         </div>
 
         <div className='form-control'>
@@ -73,7 +75,8 @@ const NewContato = () => {
           name='email' 
           placeholder='Insira aqui o email' 
           id='email' 
-          onChange={(e)=>setEmail(e.target.value)}/>
+          onChange={(e)=>setEmail(e.target.value)}
+          required/>
         </div>
 
         <div className='form-control'>
@@ -110,7 +113,8 @@ const NewContato = () => {
           <input type="date" 
           name='birthday' 
           id='nascimento' 
-          onChange={(e)=>setBirthday(e.target.value)}/>
+          onChange={(e)=>setBirthday(e.target.value)}
+          required/>
         </div>
         <div className='form-control'>
 
@@ -121,6 +125,7 @@ const NewContato = () => {
             id="avatarUrl"
             value={avatarUrl}
             onChange={(e) => setAvatarUrl(e.target.value)}
+            required
           />
 
         </div>
