@@ -22,17 +22,15 @@ const Filter = ({ onFilter }) => {
         <div>
           <label>Gênero:</label>
           <select onChange={(e) => setGenderFilter(e.target.value)}>
-            <option value="">All</option>
+            <option value="">Todos</option>
             <option value="M">Masculino</option>
             <option value="F">Feminino</option>
-            <option value="O">Outro</option>
-            <option value="N">Prefiro não mencionar</option>
           </select>
         </div>
         <div>
           <label>Language:</label>
           <select onChange={(e) => setLanguageFilter(e.target.value)}>
-            <option value="">All</option>
+            <option value="">Todos</option>
             <option value="Ingles">Inglês</option>
             <option value="Espanhol">Espanhol</option>
             <option value="Mandarim">Mandarim</option>
@@ -43,7 +41,7 @@ const Filter = ({ onFilter }) => {
         <div>
           <label>Month of Birthday:</label>
           <select onChange={(e) => setMonthFilter(e.target.value)}>
-            <option value="">All</option>
+            <option value="">Todos</option>
             <option value="1">Janeiro</option>
             <option value="2">Fevereiro</option>
             <option value="3">Março</option>

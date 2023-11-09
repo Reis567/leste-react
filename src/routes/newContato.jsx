@@ -1,6 +1,5 @@
-import React from 'react'
+
 import './NewContato.css'
-import axios from 'axios'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { v4 as uuidv4 } from 'uuid';
@@ -83,8 +82,6 @@ const NewContato = () => {
           onChange={(e)=>setGender(e.target.value)}>
             <option value="M">Masculino</option>
             <option value="F">Feminino</option>
-            <option value="O">Outro</option>
-            <option value="N">Prefiro nâo mencionar</option>
           </select>
         </div>
 

@@ -70,9 +70,7 @@ const Home = () => {
     <div className="home-content">
       <h1 className="home-title">Contatos</h1>
       <Filter onFilter={applyFilters} />
-      <Resumo contatos={
-        filteredContatos.length > 0 ? (filteredContatos) : ( contatos)
-      } />
+      <Resumo contatos={ contatos} />
       <div className="contatosgrid">
       {filteredContatos.length > 0 ? (
         filteredContatos.map((contato) => (

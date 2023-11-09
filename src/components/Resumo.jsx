@@ -27,7 +27,7 @@ const Resumo = ({ contatos }) => {
             <div className="resumo-item">
             <h3>Quantidades por gênero</h3>
             <select>
-
+            <option value="">Veja os gêneros</option>
                 {Object.keys(countGender).map((gender) => (
                 <option key={gender}>
                     {gender} : {countGender[gender]}
@@ -39,7 +39,7 @@ const Resumo = ({ contatos }) => {
             <div className="resumo-item">
             <h3>Quantidades por linguagem</h3>
             <select>
-                <option value="">Selecione uma linguagem</option>
+                <option value="">Veja os idiomas</option>
                 {Object.keys(countLanguage).map((language) => (
                 <option key={language} value={language}>
                     {language} :  {countLanguage[language]}
