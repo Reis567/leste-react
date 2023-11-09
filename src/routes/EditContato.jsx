@@ -94,11 +94,18 @@ const EditContato = () => {
             value={contato.language}
             onChange={(e) => setContato({ ...contato, language: e.target.value })}
           >
-            <option value='Ingles'>Inglês</option>
-            <option value='Espanhol'>Espanhol</option>
-            <option value='Mandarim'>Mandarim</option>
-            <option value='Portugues'>Português</option>
-            <option value='Italiano'>Italiano</option>
+            <option value="Ingles">Inglês</option>
+            <option value="Espanhol">Espanhol</option>
+            <option value="Mandarim">Mandarim</option>
+            <option value="Portugues">Português</option>
+            <option value="Italiano">Italiano</option>
+            <option value="Fijian">Fijian</option>
+            <option value="Latvian">Latvian</option>
+            <option value="Mongolian">Mongolian</option>
+            <option value="Zulu">Zulu</option>
+            <option value="Assamese">Assamese</option>
+            <option value="Burmese">Burmese</option>
+            <option value="Luxembourgish">Luxembourgish</option>
           </select>
         </div>
         <div className='form-control'>

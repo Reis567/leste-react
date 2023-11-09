@@ -89,11 +89,18 @@ const NewContato = () => {
           <label htmlFor="language">Idioma :</label>
           <select name='language' id='idioma'
           onChange={(e)=>setLanguage(e.target.value)}>
-            <option value="Ingles">Inglês</option>
-            <option value="Espanhol">Espanhol</option>
-            <option value="Mandarim">Mandarim</option>
-            <option value="Portugues">Português</option>
-            <option value="Italiano">Italiano</option>
+                <option value="Ingles">Inglês</option>
+                <option value="Espanhol">Espanhol</option>
+                <option value="Mandarim">Mandarim</option>
+                <option value="Portugues">Português</option>
+                <option value="Italiano">Italiano</option>
+                <option value="Fijian">Fijian</option>
+                <option value="Latvian">Latvian</option>
+                <option value="Mongolian">Mongolian</option>
+                <option value="Zulu">Zulu</option>
+                <option value="Assamese">Assamese</option>
+                <option value="Burmese">Burmese</option>
+                <option value="Luxembourgish">Luxembourgish</option>
           </select>
         </div>
 
