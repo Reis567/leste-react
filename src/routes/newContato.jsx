@@ -3,6 +3,7 @@ import './NewContato.css'
 import axios from 'axios'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { v4 as uuidv4 } from 'uuid';
 
 const NewContato = () => {
   const navigate = useNavigate()
@@ -18,6 +19,7 @@ const NewContato = () => {
   const createContato = async (e) => {
     e.preventDefault();
     const newContato = {
+      id: uuidv4(),
       first_name: firstName,
       last_name: lastName,
       email,

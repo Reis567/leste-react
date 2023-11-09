@@ -4,56 +4,65 @@ import axios from "axios"
 import ContatoCard from "../components/ContatoCard"
 import Filter from "../components/Filter"
 import Resumo from "../components/Resumo"
+import useStateWithCallback from "../components/UseStateWithCallback"
 
 
 const Home = () => {
-  const [contatos, setContatos] = useState([]);
+  const [contatos, setContatos] = useStateWithCallback([]);
   const [filteredContatos, setFilteredContatos] = useState([]);
-
   useEffect(() => {
-    const fetchData = async () => {
-      const cachedData = localStorage.getItem("contatos");
-
-      if (cachedData) {
-        setContatos(JSON.parse(cachedData));
-      } else {
-        try {
-          const response = await axios.get(
-            'https://my.api.mockaroo.com/lestetelecom/test.json?key=f55c4060'
-          );
-          const data = response.data;
-          setContatos(data);
-
-          localStorage.setItem("contatos", JSON.stringify(data));
-        } catch (error) {
-          console.log(error);
-        }
-      }
-    };
 
     fetchData();
   }, []);
 
+  const fetchData = async () => {
+    const cachedData = localStorage.getItem("contatos");
+
+    if (cachedData) {
+      setContatos(JSON.parse(cachedData));
+    } else {
+      try {
+        const response = await axios.get(
+          'https://my.api.mockaroo.com/lestetelecom/test.json?key=f55c4060'
+        );
+        const data = response.data;
+        setContatos(data);
+        console.log('Pegou na API')
+
+        localStorage.setItem("contatos", JSON.stringify(data));
+      } catch (error) {
+        console.log(error);
+      }
+    }
+  };
   const applyFilters = ({ gender, language, month }) => {
-    // Implemente as funções de filtro com base nos filtros selecionados
-    let filteredContatos = contatos;
-
+    let filteredContacts = [...contatos]; 
+  
     if (gender) {
-      filteredContatos = filteredContatos.filter((contato) => contato.gender === gender);
+      filteredContacts = filteredContacts.filter((contato) => contato.gender === gender);
     }
-
+  
     if (language) {
-      filteredContatos = filteredContatos.filter((contato) => contato.language === language);
+      filteredContacts = filteredContacts.filter((contato) => contato.language === language);
     }
-
+  
     if (month) {
-      filteredContatos = filteredContatos.filter((contato) => {
+      filteredContacts = filteredContacts.filter((contato) => {
         const contactMonth = new Date(contato.birthday).getMonth() + 1;
         return contactMonth === Number(month);
       });
     }
+  
+    setFilteredContatos(filteredContacts);
+  };
 
-    setFilteredContatos(filteredContatos);
+  const deleteContato = (contatoId) => {
+    const updatedContatos = contatos.filter((contato) => contato.id !== contatoId);
+
+    setContatos(updatedContatos);
+    setFilteredContatos(updatedContatos);
+
+    localStorage.setItem('contatos', JSON.stringify(updatedContatos));
   };
 
 
@@ -61,19 +70,21 @@ const Home = () => {
     <div className="home-content">
       <h1 className="home-title">Contatos</h1>
       <Filter onFilter={applyFilters} />
-      <Resumo contatos={filteredContatos} />
+      <Resumo contatos={
+        filteredContatos.length > 0 ? (filteredContatos) : ( contatos)
+      } />
       <div className="contatosgrid">
-        {filteredContatos.length === 0 ? (
-          <p>Carregando...</p>
-        ) : (
-          filteredContatos.map((contato) => (
-            <ContatoCard key={contato.id} contato={contato} />
-          ))
-        )}
+      {filteredContatos.length > 0 ? (
+        filteredContatos.map((contato) => (
+          <ContatoCard key={contato.id} contato={contato} onDelete={() => deleteContato(contato.id)} />
+        ))
+      ) : (
+        contatos.map((contato) => (
+          <ContatoCard key={contato.id} contato={contato} onDelete={() => deleteContato(contato.id)} />
+        ))
+      )}
       </div>
-      
     </div>
   );
-};
-
+}
 export default Home;
