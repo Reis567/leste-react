@@ -7,6 +7,16 @@ const Filter = ({ onFilter }) => {
   const [languageFilter, setLanguageFilter] = useState('');
   const [monthFilter, setMonthFilter] = useState('');
 
+  const contatos = JSON.parse(localStorage.getItem('contatos'));
+
+  const extractUniqueLanguages = (contatos) => {
+    const uniqueLanguages = new Set();
+    contatos.forEach((contato) => {
+      uniqueLanguages.add(contato.language);
+    });
+    return Array.from(uniqueLanguages);
+  };
+
   const handleFilter = () => {
     onFilter({
       gender: genderFilter,
@@ -14,6 +24,8 @@ const Filter = ({ onFilter }) => {
       month: monthFilter,
     });
   };
+
+  const uniqueLanguages = extractUniqueLanguages(contatos);
 
   return (
     <div className="filter">
@@ -28,14 +40,14 @@ const Filter = ({ onFilter }) => {
           </select>
         </div>
         <div>
-          <label>Language:</label>
+          <label>Idiomas:</label>
           <select onChange={(e) => setLanguageFilter(e.target.value)}>
             <option value="">Todos</option>
-            <option value="Ingles">Inglês</option>
-            <option value="Espanhol">Espanhol</option>
-            <option value="Mandarim">Mandarim</option>
-            <option value="Portugues">Português</option>
-            <option value="Italiano">Italiano</option>
+            {uniqueLanguages.map((language) => (
+              <option key={language} value={language}>
+                {language}
+              </option>
+            ))}
           </select>
         </div>
         <div>

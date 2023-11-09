@@ -115,8 +115,8 @@ const EditContato = () => {
           <input
             type="text"
             name="avatar"
-            value={contato.avatar} // Vincule o campo de entrada ao estado do avatar
-            onChange={(e) => setContato({ ...contato, avatar: e.target.value })} // Atualize o campo de avatar
+            value={contato.avatar}
+            onChange={(e) => setContato({ ...contato, avatar: e.target.value })} 
           />
         </div>
         <input type='submit' value='Salvar' className='btn' />
