@@ -111,11 +111,12 @@ const EditContato = () => {
           />
         </div>
         <div className='form-control'>
-          <label htmlFor='avatar'>Avatar:</label>
+          <label htmlFor='avatar'>URL do Avatar:</label>
           <input
-            type='file'
-            name='avatar'
-            onChange={(e) => setContato({ ...contato, avatar: e.target.files[0] })}
+            type="text"
+            name="avatar"
+            value={contato.avatar} // Vincule o campo de entrada ao estado do avatar
+            onChange={(e) => setContato({ ...contato, avatar: e.target.value })} // Atualize o campo de avatar
           />
         </div>
         <input type='submit' value='Salvar' className='btn' />

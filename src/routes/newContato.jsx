@@ -13,7 +13,7 @@ const NewContato = () => {
   const [gender, setGender] = useState('N');
   const [language, setLanguage] = useState('Portugues');
   const [birthday, setBirthday] = useState('');
-  const [avatar, setAvatar] = useState('');
+  const [avatarUrl, setAvatarUrl] = useState('');
 
   const createContato = async (e) => {
     e.preventDefault();
@@ -25,7 +25,7 @@ const NewContato = () => {
       gender,
       language,
       birthday,
-      avatar: avatar ? URL.createObjectURL(avatar) : '', 
+      avatar: avatarUrl,
     };
 
 
@@ -107,13 +107,14 @@ const NewContato = () => {
         </div>
         <div className='form-control'>
 
-        <label htmlFor="avatar">Avatar :</label>
+        <label htmlFor="avatar">URL do Avatar :</label>
         <input
-          type="file"
-          name="avatar"
-          id="avatar"
-          onChange={(e) => setAvatar(e.target.files[0])}
-        />
+            type="text"
+            name="avatarUrl"
+            id="avatarUrl"
+            value={avatarUrl}
+            onChange={(e) => setAvatarUrl(e.target.value)}
+          />
 
         </div>
         <input type="submit" value="Criar contato" className='btn' />
