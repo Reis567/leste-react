@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTrash } from '@fortawesome/free-solid-svg-icons';
+import { faTrash, faEdit } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 
 import PropTypes from 'prop-types'; 
 
@@ -11,6 +12,11 @@ const ContatoCard = ({ contato,onDelete }) => {
       <button onClick={onDelete} className='delete-btn'>
       <FontAwesomeIcon icon={faTrash} />
       </button>
+      <Link to={`/edit/${contato.id}`}>
+        <button className='edit-btn'>
+          <FontAwesomeIcon icon={faEdit} />
+        </button>
+      </Link>
       <img src={contato.avatar} alt="" />
       <div className="name">
         <h2>{contato.first_name}</h2>

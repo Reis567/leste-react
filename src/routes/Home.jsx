@@ -68,7 +68,7 @@ const Home = () => {
 
   return (
     <div className="home-content">
-      <h1 className="home-title">Contatos</h1>
+      <h1 className="home-title">Leste Contact</h1>
       <Filter onFilter={applyFilters} />
       <Resumo contatos={ contatos} />
       <div className="contatosgrid">
