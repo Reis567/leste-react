@@ -42,16 +42,16 @@ const Filter = ({ onFilter }) => {
     <div className="filter">
       <h2>Filtrar</h2>
       <div className="filters-data">
-        <div className='margin-inline10'>
-          <label>Gênero:</label>
+        <div className='filters margin-inline10'>
+          <label className='mobile-label'>Gênero:</label>
           <select onChange={(e) => setGenderFilter(e.target.value)}>
             <option value="">Todos</option>
             <option value="M">Masculino</option>
             <option value="F">Feminino</option>
           </select>
         </div>
-        <div  className='margin-inline10'>
-          <label>Idioma:</label>
+        <div  className='filters margin-inline10'>
+          <label className='mobile-label'>Idioma:</label>
           <select onChange={(e) => setLanguageFilter(e.target.value)}>
             <option value="">Todos</option>
             {uniqueLanguages.map((language) => (
@@ -61,8 +61,8 @@ const Filter = ({ onFilter }) => {
             ))}
           </select>
         </div>
-        <div className="margin-inline10">
-          <label>Mês de aniversário:</label>
+        <div className="filters margin-inline10">
+          <label className='mobile-label'>Mês de aniversário:</label>
           <select onChange={(e) => setMonthFilter(e.target.value)}>
             <option value="">Todos</option>
             {uniqueMonths.map((month) => (
@@ -72,8 +72,8 @@ const Filter = ({ onFilter }) => {
             ))}
           </select>
         </div>
-        <div  className='margin-inline10'>
-          <label>Idade:</label>
+        <div  className='filters margin-inline10'>
+          <label className='mobile-label'>Idade:</label>
           <select onChange={(e) => setAgeFilter(e.target.value)}>
             <option value="">Todas</option>
             <option value="18-25">18-25</option>

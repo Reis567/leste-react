@@ -22,3 +22,17 @@
     
 
   }
+
+    /* Celulares */
+@media(max-width:424px){
+    .home-title{
+        font-size: 35px;
+        margin-block: 20px;
+    }
+}
+
+
+/* Dispositivos pequenos */
+@media(min-width:425px) and (max-width:767px){
+    
+}

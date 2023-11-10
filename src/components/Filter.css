@@ -27,3 +27,43 @@
   .btn-green:hover{
     background: var(--sec-cl);
   }
+
+  @media(max-width:424px){
+    .filter{
+      width: 95%;
+    }
+    .filters-data{
+      flex-direction: column;
+      width: 100%;
+      align-items: center;
+    }
+    .filters{
+      display: flex;
+      flex-direction: column;
+      margin-block: 5px;
+      text-align: center;
+    }
+    .mobile-label{
+      font-size: 17px;
+    }
+  }
+
+  @media(min-width:425px) and (max-width:767px){
+    .filter{
+      width: 95%;
+    }
+    .filters-data{
+      flex-direction: column;
+      width: 100%;
+      align-items: center;
+    }
+    .filters{
+      display: flex;
+      flex-direction: column;
+      margin-block: 5px;
+      text-align: center;
+    }
+    .mobile-label{
+      font-size: 17px;
+    }
+  }

@@ -32,9 +32,7 @@
 
   /* Celulares */
 @media(max-width:424px){
-.container{
-  display: none;
-}
+
 .navbar{
   justify-content: space-between;
 }
@@ -74,9 +72,7 @@
 
 /* Dispositivos pequenos */
 @media(min-width:425px) and (max-width:767px){
-  .container{
-    display: none;
-  }
+
   .navbar{
     justify-content: space-between;
   }
@@ -115,9 +111,6 @@
 
 /* Tablets pequenos */
 @media(min-width:768px) and (max-width:991px){
-.container{
-  display: none;
-}
 }
 
 /* Tablets grandes e Notebook */
