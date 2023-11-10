@@ -94,15 +94,20 @@ const Home = () => {
     setFilteredContatos(filteredContacts);
   };
 
-  const deleteContato = (contatoId) => {
-    const updatedContatos = contatos.filter((contato) => contato.id !== contatoId);
+  const confirmAndDeleteContato = (contatoId) => {
+    // Exibe um alerta de confirmação
+    const userConfirmed = window.confirm("Tem certeza que deseja excluir este contato?");
 
-    setContatos(updatedContatos);
-    setFilteredContatos(updatedContatos);
+    // Se o usuário confirmou, proceda com a exclusão
+    if (userConfirmed) {
+      const updatedContatos = contatos.filter((contato) => contato.id !== contatoId);
 
-    localStorage.setItem('contatos', JSON.stringify(updatedContatos));
+      setContatos(updatedContatos);
+      setFilteredContatos(updatedContatos);
+
+      localStorage.setItem('contatos', JSON.stringify(updatedContatos));
+    }
   };
-
 
   return (
     <div className="home-content">
@@ -112,11 +117,11 @@ const Home = () => {
       <div className="contatosgrid">
       {filteredContatos.length > 0 ? (
         filteredContatos.map((contato) => (
-          <ContatoCard key={contato.id} contato={contato} onDelete={() => deleteContato(contato.id)} />
+          <ContatoCard key={contato.id} contato={contato} onDelete={() => confirmAndDeleteContato(contato.id)} />
         ))
       ) : (
         contatos.map((contato) => (
-          <ContatoCard key={contato.id} contato={contato} onDelete={() => deleteContato(contato.id)} />
+          <ContatoCard key={contato.id} contato={contato} onDelete={() => confirmAndDeleteContato(contato.id)} />
         ))
       )}
       </div>
