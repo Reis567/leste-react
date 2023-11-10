@@ -21,3 +21,32 @@
     justify-content: center;
     align-items: center;
 }
+
+@media(max-width:424px){
+
+    .resumo{
+        width: 95%;
+    }
+    .resumos{
+        flex-direction: column;
+    }
+    .resumo-item{
+        flex-direction: column;
+        text-align: center;
+        margin-block: 5px;
+    }
+}
+
+@media(min-width:425px) and (max-width:767px){
+    .resumo{
+        width: 95%;
+    }
+    .resumos{
+        flex-direction: column;
+    }
+    .resumo-item{
+        flex-direction: column;
+        text-align: center;
+        margin-block: 5px;
+    }
+}
