@@ -122,9 +122,14 @@
 
 /* Tablets pequenos */
 @media(min-width:768px) and (max-width:991px){
+    .new-contato form{
+        width: 95%;
+    }
 }
 
 /* Tablets grandes e Notebook */
 @media(min-width:992px) and (max-width:1400px){
-
+    .new-contato form{
+        width: 75%;
+    }
 }
