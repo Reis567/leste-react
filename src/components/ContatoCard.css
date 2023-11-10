@@ -65,3 +65,12 @@
 .edit-btn svg{
     margin-left: 5px;
 }
+
+@media(max-width:424px){
+    .contatocard .name{
+        display: flex;
+        gap: 7px;
+        color: var(--sec-cl);
+        font-size: 19px;
+    }
+}
