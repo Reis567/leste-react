@@ -74,3 +74,12 @@
         font-size: 19px;
     }
 }
+
+@media(min-width:425px) and (max-width:767px){
+    .contatocard .name{
+        display: flex;
+        gap: 7px;
+        color: var(--sec-cl);
+        font-size: 19px;
+    }
+}

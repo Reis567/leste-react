@@ -48,7 +48,7 @@ const NewContato = () => {
       <form onSubmit={(e) => createContato(e)}>
         <div className='form-control'>
 
-          <label className='form-label' htmlFor="first_name">Nome :</label>
+          <label className='form-label' htmlFor="first_name">Nome:</label>
           <input type="text"
           name='first_name'
           placeholder='Insira aqui o nome' 
@@ -59,7 +59,7 @@ const NewContato = () => {
 
         <div className='form-control'>
 
-          <label className='form-label' htmlFor="last_name">Sobrenome :</label>
+          <label className='form-label' htmlFor="last_name">Sobrenome:</label>
           <input type="text" 
           name='last_name' 
           placeholder='Insira aqui o sobrenome' 
@@ -70,7 +70,7 @@ const NewContato = () => {
 
         <div className='form-control'>
 
-          <label className='form-label' htmlFor="email">Email :</label>
+          <label className='form-label' htmlFor="email">Email:</label>
           <input type="email" 
           name='email' 
           placeholder='Insira aqui o email' 
@@ -80,7 +80,7 @@ const NewContato = () => {
         </div>
       <div className="select-divs">
         <div className='form-select'>
-          <label htmlFor="gender">Gênero :</label>
+          <label htmlFor="gender">Gênero:</label>
           <select name='gender' id='genero'
           onChange={(e)=>setGender(e.target.value)}>
             <option value="M">Masculino</option>
@@ -89,7 +89,7 @@ const NewContato = () => {
         </div>
 
         <div className='form-select'>
-          <label htmlFor="language">Idioma :</label>
+          <label htmlFor="language">Idioma:</label>
           <select name='language' id='idioma'
           onChange={(e)=>setLanguage(e.target.value)}>
                 <option value="Ingles">Inglês</option>
@@ -111,7 +111,7 @@ const NewContato = () => {
 
         <div className='form-control'>
 
-          <label className='form-label' htmlFor="birthday">Nascimento :</label>
+          <label className='form-label' htmlFor="birthday">Nascimento:</label>
           <input type="date" 
           name='birthday' 
           id='nascimento' 
@@ -121,7 +121,7 @@ const NewContato = () => {
         </div>
         <div className='form-control'>
 
-        <label className='form-label' htmlFor="avatar">URL do Avatar :</label>
+        <label className='form-label' htmlFor="avatar">URL do Avatar:</label>
         <input
             type="text"
             name="avatarUrl"

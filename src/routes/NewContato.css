@@ -77,3 +77,45 @@
     font-weight: bold;
     color: var(--black);
 }
+
+@media(max-width:424px){
+    .new-contato form{
+        width: 95%;
+    }
+    .new-contato h2{
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .new-contato form .form-control{
+        margin-inline: 0px;
+    }
+    .select-divs{
+        flex-direction: column;
+    }
+    .new-contato form .select-divs{
+        margin-inline: 0px;
+        font-weight: bold;
+    }
+}
+
+@media(min-width:425px) and (max-width:767px){
+    .new-contato form{
+        width: 95%;
+    }
+    .new-contato h2{
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .new-contato form .form-control{
+        margin-inline: 0px;
+    }
+    .select-divs{
+        flex-direction: column;
+    }
+    .new-contato form .select-divs{
+        margin-inline: 0px;
+        font-weight: bold;
+    }
+}
