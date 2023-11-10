@@ -50,3 +50,25 @@
         margin-block: 5px;
     }
 }
+
+/* Tablets pequenos */
+@media(min-width:768px) and (max-width:991px){
+    .resumo{
+        width: 90%;
+    }
+    .resumos{
+        flex-direction: column;
+    }
+    .resumo-item{
+        flex-direction: column;
+        text-align: center;
+        margin-block: 5px;
+    }
+}
+
+/* Tablets grandes e Notebook */
+@media(min-width:992px) and (max-width:1400px){
+    .resumo{
+        width: 90%;
+    }
+}

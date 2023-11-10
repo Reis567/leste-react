@@ -45,3 +45,17 @@
         grid-template-columns: repeat(1, 1fr); 
     }
 }
+
+/* Tablets pequenos */
+@media(min-width:768px) and (max-width:991px){
+    .contatosgrid {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+/* Tablets grandes e Notebook */
+@media(min-width:992px) and (max-width:1400px){
+    .contatosgrid {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
