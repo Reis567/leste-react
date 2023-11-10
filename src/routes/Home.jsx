@@ -35,8 +35,8 @@ const Home = () => {
       }
     }
   };
-  const applyFilters = ({ gender, language, month }) => {
-    let filteredContacts = [...contatos]; 
+  const applyFilters = ({ gender, language, month, age }) => {
+    let filteredContacts = [...contatos];
   
     if (gender) {
       filteredContacts = filteredContacts.filter((contato) => contato.gender === gender);
@@ -53,7 +53,32 @@ const Home = () => {
       });
     }
   
+    if (age) {
+      const now = new Date();
+      const ageRanges = age.split('-');
+      const minAge = parseInt(ageRanges[0], 10);
+    
+      if (age === '56+') {
+        filteredContacts = filteredContacts.filter((contato) => {
+          const birthday = new Date(contato.birthday);
+          const yearsDiff = now.getFullYear() - birthday.getFullYear();
+    
+          return yearsDiff >= minAge;
+        });
+      } else {
+        const maxAge = parseInt(ageRanges[1], 10);
+    
+        filteredContacts = filteredContacts.filter((contato) => {
+          const birthday = new Date(contato.birthday);
+          const yearsDiff = now.getFullYear() - birthday.getFullYear();
+    
+          return yearsDiff >= minAge && yearsDiff <= maxAge;
+        });
+      }
+    }
+    
     setFilteredContatos(filteredContacts);
+    
   };
 
   const deleteContato = (contatoId) => {

@@ -6,6 +6,7 @@ const Filter = ({ onFilter }) => {
   const [genderFilter, setGenderFilter] = useState('');
   const [languageFilter, setLanguageFilter] = useState('');
   const [monthFilter, setMonthFilter] = useState('');
+  const [ageFilter, setAgeFilter] = useState('');
 
   const contatos = JSON.parse(localStorage.getItem('contatos'));
 
@@ -22,6 +23,7 @@ const Filter = ({ onFilter }) => {
       gender: genderFilter,
       language: languageFilter,
       month: monthFilter,
+      age: ageFilter,
     });
   };
 
@@ -66,6 +68,16 @@ const Filter = ({ onFilter }) => {
             <option value="10">Outubro</option>
             <option value="11">Novembro</option>
             <option value="12">Dezembro</option>
+          </select>
+        </div>
+        <div  className='margin-inline10'>
+          <label>Idade:</label>
+          <select onChange={(e) => setAgeFilter(e.target.value)}>
+            <option value="">Todas</option>
+            <option value="18-25">18-25</option>
+            <option value="26-40">26-40</option>
+            <option value="41-55">41-55</option>
+            <option value="56+">56+</option>
           </select>
         </div>
       </div>
