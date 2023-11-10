@@ -73,3 +73,45 @@
 .inputform::placeholder {
     color: var(--white);
 }
+
+@media(max-width:424px){
+    .edit-contato form{
+        width: 95%;
+    }
+    .edit-contato h2{
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .edit-contato form .form-control{
+        margin-inline: 0px;
+    }
+    .select-divs{
+        flex-direction: column;
+    }
+    .edit-contato form .select-divs{
+        margin-inline: 0px;
+        font-weight: bold;
+    }
+}
+
+@media(min-width:425px) and (max-width:767px){
+    .edit-contato form{
+        width: 95%;
+    }
+    .edit-contato h2{
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .edit-contato form .form-control{
+        margin-inline: 0px;
+    }
+    .select-divs{
+        flex-direction: column;
+    }
+    .edit-contato form .select-divs{
+        margin-inline: 0px;
+        font-weight: bold;
+    }
+}
