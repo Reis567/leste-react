@@ -6,7 +6,7 @@ import { createBrowserRouter , RouterProvider} from 'react-router-dom'
 
 //Paginas
 import Home from './routes/Home.jsx'
-import NewContato from './routes/NewContato.jsx'
+import NewContato from './routes/NewContato'
 import EditContato from './routes/EditContato.jsx'
 
 const router = createBrowserRouter([
