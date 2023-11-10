@@ -48,7 +48,21 @@ const Home = () => {
   
     if (month) {
       filteredContacts = filteredContacts.filter((contato) => {
-        const contactMonth = new Date(contato.birthday).getMonth() + 1;
+        const now = new Date();
+        // Defina o fuso horário para o Horário Padrão do Brasil (BRT - Brasília)
+        now.setTime(now.getTime() - 3 * 60 * 60 * 1000);
+    
+        const contactBirthday = new Date(contato.birthday);
+        // Defina o fuso horário para o Horário Padrão do Brasil (BRT - Brasília)
+        contactBirthday.setTime(contactBirthday.getTime() - 3 * 60 * 60 * 1000);
+    
+        const contactMonth = contactBirthday.getMonth() + 1;
+        const contactDay = contactBirthday.getDate();
+    
+        if (contactMonth === 1 && contactDay === 1) {
+          return true; // Pessoas nascidas em 01/01
+        }
+    
         return contactMonth === Number(month);
       });
     }
@@ -78,7 +92,6 @@ const Home = () => {
     }
     
     setFilteredContatos(filteredContacts);
-    
   };
 
   const deleteContato = (contatoId) => {

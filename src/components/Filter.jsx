@@ -17,6 +17,14 @@ const Filter = ({ onFilter }) => {
     });
     return Array.from(uniqueLanguages);
   };
+  const extractUniqueMonths = (contatos) => {
+    const uniqueMonths = new Set();
+    contatos.forEach((contato) => {
+      const contactMonth = new Date(contato.birthday).getMonth() + 1;
+      uniqueMonths.add(contactMonth);
+    });
+    return Array.from(uniqueMonths).sort((a, b) => a - b);
+  };
 
   const handleFilter = () => {
     onFilter({
@@ -28,6 +36,7 @@ const Filter = ({ onFilter }) => {
   };
 
   const uniqueLanguages = extractUniqueLanguages(contatos);
+  const uniqueMonths = extractUniqueMonths(contatos);
 
   return (
     <div className="filter">
@@ -52,22 +61,15 @@ const Filter = ({ onFilter }) => {
             ))}
           </select>
         </div>
-        <div  className='margin-inline10'>
+        <div className="margin-inline10">
           <label>Mês de aniversário:</label>
           <select onChange={(e) => setMonthFilter(e.target.value)}>
             <option value="">Todos</option>
-            <option value="1">Janeiro</option>
-            <option value="2">Fevereiro</option>
-            <option value="3">Março</option>
-            <option value="4">Abril</option>
-            <option value="5">Maio</option>
-            <option value="6">Junho</option>
-            <option value="7">Julho</option>
-            <option value="8">Agosto</option>
-            <option value="9">Setembro</option>
-            <option value="10">Outubro</option>
-            <option value="11">Novembro</option>
-            <option value="12">Dezembro</option>
+            {uniqueMonths.map((month) => (
+              <option key={month} value={month}>
+                {new Date(0, month - 1).toLocaleString('pt-BR', { month: 'long' })}
+              </option>
+            ))}
           </select>
         </div>
         <div  className='margin-inline10'>
